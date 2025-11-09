@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>My Apology and Final Message — App HIVE</title>
-  <meta name="description" content="Apology and explanation from Aliwan-dev regarding daily task and feedback in App HIVE community">
+  <title>Clarification & Final Message — App HIVE</title>
+  <meta name="description" content="Clarification and final message from Aliwan-dev regarding daily task warning and feedback issue in App HIVE community">
   <style>
     :root{--bg:#0f172a;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--text:#e6eef8}
     html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#071124 0%, #071426 100%);color:var(--text)}
@@ -29,45 +29,44 @@
     <header>
       <div class="logo">AH</div>
       <div>
-        <h1>My Apology and Final Message to the App HIVE Community</h1>
-        <p class="lead">A sincere explanation and request from <strong>Aliwan-dev</strong> regarding the recent daily task feedback issue.</p>
+        <h1>Clarification and Final Message to the App HIVE Community</h1>
+        <p class="lead">A clarification and sincere explanation from <strong>Aliwan-dev</strong> regarding the warning and feedback issue in the App HIVE community.</p>
         <div class="meta">
           <div class="chip">Author: Aliwan-dev</div>
           <div class="chip">App: QR Code Scanner</div>
-          <div class="chip">Context: Daily task / feedback</div>
+          <div class="chip">Context: Daily task / feedback clarification</div>
         </div>
       </div>
     </header>
 
     <section>
-      <p>Dear App HIVE Team and Community Members,</p>
+      <h2>Clarification Regarding Inactivity Warning</h2>
+      <p>Dear Admin Team,</p>
+      <p>I recently received a warning for <strong>inactivity in completing the daily task</strong>, and I was informed that if this happens again, I may be removed from the group.</p>
+      <p>However, I would like to clarify that I have <strong>never missed a single daily task</strong> since joining this community. I always complete my feedback tasks for <strong>all members</strong> as required, and I consistently participate in the activities provided.</p>
+      <p>This is why the warning surprised me, as I have been fully active and committed to following the daily task schedule.</p>
+      <p>I kindly ask you to please review my activity logs or submission records to verify this. I believe there might have been a misunderstanding or a system issue that caused the warning to appear incorrectly.</p>
+      <p>Thank you very much for your time and understanding. I truly value being part of this community and remain committed to supporting the App HIVE program.</p>
+    </section>
 
+    <section>
+      <h2>My Apology and Final Message</h2>
       <p>I apologize if using this feature to express my disappointment causes any inconvenience to anyone.</p>
-
       <p>If today I am removed from <strong>Session 1</strong> of the App HIVE community, I want to clarify my situation and share my thoughts sincerely.</p>
-
       <p>I admit that I made a mistake by submitting the <strong>wrong screenshot</strong> for my daily task feedback. However, as soon as I received the <strong>rejection</strong>, I immediately took a new and correct screenshot and <strong>resubmitted</strong> it at <strong>19:27 local time</strong>.</p>
-
       <p>This means there was still about <strong>4 hours and 33 minutes</strong> remaining before the daily task reset. Considering my time zone (<strong>UTC+7</strong>), that would be a total of <strong>11 hours and 33 minutes</strong> for my resubmitted feedback to receive a response.</p>
-
       <p>Unfortunately, until the daily task reset, I did <strong>not receive any response</strong>—neither approval nor rejection. Later, I found that my feedback was actually <strong>approved after the submission deadline</strong>, at <strong>07:52 local time (UTC 01:52)</strong>, which was beyond the system’s time limit.</p>
-
       <p>Given these facts, I feel it is <strong>not entirely fair</strong> that I received a penalty, as I have always completed my daily tasks consistently and on time.</p>
-
       <p>Every action has its consequences, and I hold no anger toward the app owner who did not respond in time. However, I do feel disappointed by how the situation was handled.</p>
-
       <p>If I am removed from this group, I will still <strong>honor my commitment</strong> to keep the apps installed for the agreed period of <strong>14 days</strong>. I sincerely hope that other members will also continue to support each other — both inside and outside the group — for the good of the community.</p>
-
       <p>I deeply appreciate all the feedback and support I have received during my time here.</p>
-
       <p>Thank you very much for your understanding.</p>
-
       <p>Warm regards,</p>
       <p><strong>Aliwan-dev</strong><br><em>App QR Code Scanner</em></p>
     </section>
 
     <footer>
-      <small>Note: You can edit this page, copy the content, or use it as your <code>index.html</code> for a GitHub Pages site.</small>
+      <small>Note: You can use this as your <code>index.html</code> for GitHub Pages or share it as a clarification letter.</small>
       <div class="actions">
         <button class="btn" id="copyBtn">Copy HTML</button>
         <button class="btn secondary" id="downloadBtn">Download .html</button>
@@ -76,7 +75,7 @@
   </main>
 
   <script>
-    const htmlContent = `<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width,initial-scale=1">\n  <title>My Apology and Final Message — App HIVE</title>\n  <meta name="description" content="Apology and explanation from Aliwan-dev regarding daily task and feedback in App HIVE community">\n</head>\n<body>\n${document.querySelector('main').innerHTML}\n</body>\n</html>`;
+    const htmlContent = document.documentElement.outerHTML;
 
     document.getElementById('copyBtn').addEventListener('click', async () => {
       try {
