@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Apology and Final Message — App HIVE</title>
+  <meta name="description" content="Apology and explanation from Aliwan-dev regarding daily task and feedback in App HIVE community">
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--text:#e6eef8}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#071124 0%, #071426 100%);color:var(--text)}
+    .wrap{max-width:880px;margin:48px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 12px 30px rgba(2,6,23,0.6);border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042029}
+    h1{font-size:1.25rem;margin:0}
+    p.lead{color:var(--muted);margin-top:6px}
+    section{margin-top:20px;line-height:1.6}
+    footer{margin-top:22px;color:var(--muted);font-size:0.95rem}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .chip{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.02);font-size:0.85rem}
+    pre{background:rgba(0,0,0,0.25);padding:12px;border-radius:8px;overflow:auto;margin:12px 0}
+    .actions{display:flex;gap:10px;margin-top:18px}
+    .btn{background:var(--accent);color:#042029;padding:8px 12px;border-radius:8px;border:none;font-weight:600;cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+    @media (max-width:640px){.wrap{margin:18px;padding:18px}}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <header>
+      <div class="logo">AH</div>
+      <div>
+        <h1>My Apology and Final Message to the App HIVE Community</h1>
+        <p class="lead">A sincere explanation and request from <strong>Aliwan-dev</strong> regarding the recent daily task feedback issue.</p>
+        <div class="meta">
+          <div class="chip">Author: Aliwan-dev</div>
+          <div class="chip">App: QR Code Scanner</div>
+          <div class="chip">Context: Daily task / feedback</div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <p>Dear App HIVE Team and Community Members,</p>
+
+      <p>I apologize if using this feature to express my disappointment causes any inconvenience to anyone.</p>
+
+      <p>If today I am removed from <strong>Session 1</strong> of the App HIVE community, I want to clarify my situation and share my thoughts sincerely.</p>
+
+      <p>I admit that I made a mistake by submitting the <strong>wrong screenshot</strong> for my daily task feedback. However, as soon as I received the <strong>rejection</strong>, I immediately took a new and correct screenshot and <strong>resubmitted</strong> it at <strong>19:27 local time</strong>.</p>
+
+      <p>This means there was still about <strong>4 hours and 33 minutes</strong> remaining before the daily task reset. Considering my time zone (<strong>UTC+7</strong>), that would be a total of <strong>11 hours and 33 minutes</strong> for my resubmitted feedback to receive a response.</p>
+
+      <p>Unfortunately, until the daily task reset, I did <strong>not receive any response</strong>—neither approval nor rejection. Later, I found that my feedback was actually <strong>approved after the submission deadline</strong>, at <strong>07:52 local time (UTC 01:52)</strong>, which was beyond the system’s time limit.</p>
+
+      <p>Given these facts, I feel it is <strong>not entirely fair</strong> that I received a penalty, as I have always completed my daily tasks consistently and on time.</p>
+
+      <p>Every action has its consequences, and I hold no anger toward the app owner who did not respond in time. However, I do feel disappointed by how the situation was handled.</p>
+
+      <p>If I am removed from this group, I will still <strong>honor my commitment</strong> to keep the apps installed for the agreed period of <strong>14 days</strong>. I sincerely hope that other members will also continue to support each other — both inside and outside the group — for the good of the community.</p>
+
+      <p>I deeply appreciate all the feedback and support I have received during my time here.</p>
+
+      <p>Thank you very much for your understanding.</p>
+
+      <p>Warm regards,</p>
+      <p><strong>Aliwan-dev</strong><br><em>App QR Code Scanner</em></p>
+    </section>
+
+    <footer>
+      <small>Note: You can edit this page, copy the content, or use it as your <code>index.html</code> for a GitHub Pages site.</small>
+      <div class="actions">
+        <button class="btn" id="copyBtn">Copy HTML</button>
+        <button class="btn secondary" id="downloadBtn">Download .html</button>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const htmlContent = `<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width,initial-scale=1">\n  <title>My Apology and Final Message — App HIVE</title>\n  <meta name="description" content="Apology and explanation from Aliwan-dev regarding daily task and feedback in App HIVE community">\n</head>\n<body>\n${document.querySelector('main').innerHTML}\n</body>\n</html>`;
+
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(htmlContent);
+        alert('HTML copied to clipboard. You can paste it into index.html for GitHub Pages.');
+      } catch (e) {
+        alert('Copy failed. You can still download the HTML file.');
+      }
+    });
+
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const blob = new Blob([htmlContent], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
