@@ -1,9 +1,9 @@
 ---
-id: simple-number-match
-title: Privacy Policy - Simple Number Match
+app_id: smart-number-match
+title: Privacy Policy - Smart Number Match
 ---
 
-Your privacy is important to us. **Simple Number Match** does not collect personal data. Any game progress is stored locally on your device.
+Your privacy is important to us. **Smart Number Match** does not collect personal data. Any game progress is stored locally on your device.
 
 ### Permissions
 This app requires no special permissions and works entirely offline. We do not access your camera, contacts, or location.

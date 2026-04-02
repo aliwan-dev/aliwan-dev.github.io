@@ -1,5 +1,6 @@
 ---
-id: simple-number-match
+app_id: smart-number-match
+title: "Smart Number Match: Daily"
 ---
 A simple yet addictive number puzzle game to sharpen your brain every day! 
 

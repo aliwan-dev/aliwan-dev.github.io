@@ -1,5 +1,6 @@
 ---
-id: qr-code-scanner
+app_id: qr-code-scanner
+title: "QR Code Scanner: Barcode Reader"
 ---
 QR Code Scanner & Barcode Reader — fast, free, and built for everyday use. 
 

@@ -1,5 +1,5 @@
 ---
-id: qr-code-scanner
+app_id: qr-code-scanner
 title: Privacy Policy - QR Code Scanner
 ---
 

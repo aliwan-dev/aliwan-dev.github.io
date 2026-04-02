@@ -1,5 +1,5 @@
 ---
-id: sudoku-lite
+app_id: sudoku-lite
 title: Privacy Policy - Sudoku (lite)
 ---
 

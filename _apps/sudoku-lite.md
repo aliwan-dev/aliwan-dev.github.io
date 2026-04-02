@@ -1,5 +1,6 @@
 ---
-id: sudoku-lite
+app_id: sudoku-lite
+title: "Sudoku Lite"
 ---
 Sudoku Lite is a simple and lightweight Sudoku game designed for players who enjoy quick and relaxing puzzle sessions.
 

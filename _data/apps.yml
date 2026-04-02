@@ -22,7 +22,7 @@
     - "Custom QR code generation"
     - "Full scan history & favorites"
 
-- id: simple-number-match
+- id: smart-number-match
   name: "Smart Number Match: Daily"
   tagline: "Addictive number puzzle game to sharpen your brain."
   description: "Connect identical numbers or pairs that add up to 10. A relaxing logic puzzle for daily brain training."
@@ -32,7 +32,7 @@
   release_date: "2025-11-03"
   last_update: "2026-03-29"
   playstore_url: "https://play.google.com/store/apps/details?id=com.aliwan.numbermatch"
-  privacy_url: "/privacy/simple-number-match/"
+  privacy_url: "/privacy/smart-number-match/"
   icon: ""
   screenshots: []
   downloads: "10+"
