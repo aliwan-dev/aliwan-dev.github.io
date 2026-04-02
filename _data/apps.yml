@@ -1,0 +1,63 @@
+# ============================================================
+# _data/apps.yml — Single Source of Truth for all apps
+# ============================================================
+
+- id: qr-code-scanner
+  name: "QR Code Scanner"
+  tagline: "Fast, Secure & Smart QR Reader"
+  description: "Designed for users who value speed and privacy. Scan any QR code or barcode instantly with relevant actions."
+  status: "released"
+  category: "Utilities"
+  version: "1.0.0"
+  release_date: "2025-11-03"
+  last_update: "2025-11-03"
+  playstore_url: "https://play.google.com/store/apps/dev?id=7390731671542618991"
+  privacy_url: "/privacy/qr-code-scanner/"
+  icon: "" # Add later
+  screenshots: []
+  downloads: "1K+"
+  rating: "4.8"
+  highlights:
+    - "Instant scanning with auto-focus"
+    - "Privacy-focused local processing"
+    - "No unnecessary battery drain"
+
+- id: simple-number-match
+  name: "Simple Number Match"
+  tagline: "Relaxing Number Puzzle Game"
+  description: "A light and relaxing number matching game. Meditative experience while keeping your brain active."
+  status: "released"
+  category: "Puzzle"
+  version: "1.0.0"
+  release_date: "2025-11-03"
+  last_update: "2025-11-03"
+  playstore_url: "https://play.google.com/store/apps/dev?id=7390731671542618991"
+  privacy_url: "/privacy/simple-number-match/"
+  icon: "" # Add later
+  screenshots: []
+  downloads: "500+"
+  rating: "4.7"
+  highlights:
+    - "Minimalist and clean UI"
+    - "Multiple difficulty levels"
+    - "No-pressure gameplay"
+
+- id: sudoku-lite
+  name: "Sudoku (lite)"
+  tagline: "Lightweight Classical Puzzle"
+  description: "Classic puzzle experience without the bloat. Focus on logic with a clean and helping interface."
+  status: "released"
+  category: "Puzzle"
+  version: "1.0.0"
+  release_date: "2025-11-03"
+  last_update: "2025-11-03"
+  playstore_url: "https://play.google.com/store/apps/dev?id=7390731671542618991"
+  privacy_url: "/privacy/sudoku-lite/"
+  icon: "" # Add later
+  screenshots: []
+  downloads: "500+"
+  rating: "4.9"
+  highlights:
+    - "Clean and small app size"
+    - "Beginner to advanced levels"
+    - "Dark mode support"

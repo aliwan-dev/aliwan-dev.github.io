@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<!-- ── Hero ── -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <p class="hero-eyebrow">Mobile Developer Portfolio</p>
+    <h1 id="hero-heading">
+      My Apps,<br>
+      <em>from Idea to Play Store.</em>
+    </h1>
+    <p class="hero-desc">{{ site.description }}</p>
+
+    <!-- Stats dinamis dari data -->
+    {% assign released = site.data.apps | where: "status", "released" %}
+    {% assign in_dev   = site.data.apps | where: "status", "development" %}
+    {% assign drafts   = site.data.apps | where: "status", "draft" %}
+
+    <div class="hero-stats" aria-label="App statistics">
+      <div>
+        <span class="hero-stat-value">{{ released.size }}</span>
+        <span class="hero-stat-label">Released on Play Store</span>
+      </div>
+      <div>
+        <span class="hero-stat-value">{{ in_dev.size }}</span>
+        <span class="hero-stat-label">In Development</span>
+      </div>
+      <div>
+        <span class="hero-stat-value">{{ drafts.size }}</span>
+        <span class="hero-stat-label">Concepts & Ideas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Released Apps ── -->
+{% if released.size > 0 %}
+<section class="apps-section" id="released" aria-labelledby="released-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number" aria-hidden="true">01</span>
+      <h2 class="section-title" id="released-title">Released on Play Store</h2>
+      <span class="section-count" aria-label="{{ released.size }} apps">{{ released.size }} apps</span>
+    </div>
+    <div class="apps-grid" role="list">
+      {% for app in released %}
+        <div role="listitem">{% include app-card.html app=app %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ── In Development ── -->
+{% if in_dev.size > 0 %}
+<section class="apps-section" id="development" aria-labelledby="dev-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number" aria-hidden="true">02</span>
+      <h2 class="section-title" id="dev-title">In Development</h2>
+      <span class="section-count" aria-label="{{ in_dev.size }} apps">{{ in_dev.size }} apps</span>
+    </div>
+    <div class="apps-grid" role="list">
+      {% for app in in_dev %}
+        <div role="listitem">{% include app-card.html app=app %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ── Draft / Concept ── -->
+{% if drafts.size > 0 %}
+<section class="apps-section" id="drafts" aria-labelledby="draft-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number" aria-hidden="true">03</span>
+      <h2 class="section-title" id="draft-title">Concepts & Ideas</h2>
+      <span class="section-count" aria-label="{{ drafts.size }} concepts">{{ drafts.size }} concepts</span>
+    </div>
+    <div class="apps-grid" role="list">
+      {% for app in drafts %}
+        <div role="listitem">{% include app-card.html app=app %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,145 @@
+---
+layout: default
+---
+
+{% assign app = site.data.apps | where: "id", page.app_id | first %}
+
+{% if app == nil %}
+<div class="container">
+  <p style="padding: 4rem 0; color: var(--text-muted);">App tidak ditemukan. Pastikan <code>app_id</code> di front matter sesuai dengan ID di <code>_data/apps.yml</code>.</p>
+</div>
+{% else %}
+
+<article class="app-detail">
+  <div class="container">
+
+    <!-- Back Link -->
+    <a href="{{ '/' | relative_url }}" class="app-detail__back" aria-label="Kembali ke halaman utama">
+      ← Semua Apps
+    </a>
+
+    <!-- App Hero Header -->
+    <header class="app-detail__hero">
+      {% if app.icon and app.icon != "" %}
+        <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon" class="app-detail__icon">
+      {% else %}
+        <div class="app-detail__icon-placeholder" aria-hidden="true">📱</div>
+      {% endif %}
+
+      <div>
+        <h1 class="app-detail__title">{{ app.name }}</h1>
+        <p class="app-detail__tagline">{{ app.tagline }}</p>
+
+        <div class="app-detail__badges">
+          <span class="badge badge--{{ app.status }}">{{ app.status }}</span>
+          {% if app.version and app.version != "" %}
+            <span class="app-detail__version">v{{ app.version }}</span>
+          {% endif %}
+          {% if app.release_date and app.release_date != "" %}
+            <span class="app-detail__date">{{ app.release_date | date: "%-d %B %Y" }}</span>
+          {% endif %}
+        </div>
+
+        <div class="app-detail__actions">
+          {% if app.status == "released" and app.playstore_url and app.playstore_url != "" %}
+            <a href="{{ app.playstore_url }}" class="btn btn--primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+                <path d="M3.18 23.76a1.99 1.99 0 0 0 2.17-.32l.08-.07 12.16-7.02-2.63-2.63zM.5 1.39C.19 1.73 0 2.26 0 2.96v18.1c0 .7.19 1.23.51 1.57l.08.08 10.14-10.14v-.24L.58 1.31z"/>
+                <path d="M17.62 9.39l-3.17-3.17-10.25 5.92v.28l3.4 3.41z"/>
+              </svg>
+              Download di Play Store
+            </a>
+          {% endif %}
+          {% if app.privacy_url and app.privacy_url != "" %}
+            <a href="{{ app.privacy_url | relative_url }}" class="btn btn--secondary">Privacy Policy</a>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    <!-- Body: Content + Sidebar -->
+    <div class="app-detail__body">
+
+      <!-- Main Markdown Content -->
+      <div class="app-detail__content">
+        {{ content }}
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="app-detail__sidebar" aria-label="Informasi aplikasi">
+
+        <!-- Info Card -->
+        <div class="info-card">
+          <h2 class="info-card__title">Informasi</h2>
+          <ul class="info-card__list" aria-label="Detail aplikasi">
+            {% if app.category and app.category != "" %}
+            <li>
+              <span class="label">Kategori</span>
+              <span class="value">{{ app.category }}</span>
+            </li>
+            {% endif %}
+            {% if app.version and app.version != "" %}
+            <li>
+              <span class="label">Versi</span>
+              <span class="value">v{{ app.version }}</span>
+            </li>
+            {% endif %}
+            {% if app.release_date and app.release_date != "" %}
+            <li>
+              <span class="label">Rilis</span>
+              <span class="value">{{ app.release_date | date: "%-d %b %Y" }}</span>
+            </li>
+            {% endif %}
+            {% if app.last_update and app.last_update != "" %}
+            <li>
+              <span class="label">Update</span>
+              <span class="value">{{ app.last_update | date: "%-d %b %Y" }}</span>
+            </li>
+            {% endif %}
+            {% if app.downloads and app.downloads != "" %}
+            <li>
+              <span class="label">Unduhan</span>
+              <span class="value">{{ app.downloads }}</span>
+            </li>
+            {% endif %}
+            {% if app.rating and app.rating != "" %}
+            <li>
+              <span class="label">Rating</span>
+              <span class="value">{{ app.rating }} / 5.0</span>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+
+        <!-- Screenshots -->
+        {% if app.screenshots and app.screenshots.size > 0 %}
+        <div class="info-card">
+          <h2 class="info-card__title">Screenshots</h2>
+          <div class="screenshots-grid">
+            {% for screenshot in app.screenshots %}
+              <img src="{{ screenshot | relative_url }}" alt="Screenshot {{ forloop.index }} dari {{ app.name }}" loading="lazy">
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Links Card -->
+        <div class="info-card">
+          <h2 class="info-card__title">Links</h2>
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            {% if app.playstore_url and app.playstore_url != "" %}
+              <a href="{{ app.playstore_url }}" class="btn btn--secondary" target="_blank" rel="noopener" style="justify-content:flex-start;">Play Store ↗</a>
+            {% endif %}
+            {% if app.privacy_url and app.privacy_url != "" %}
+              <a href="{{ app.privacy_url | relative_url }}" class="btn btn--secondary" style="justify-content:flex-start;">Privacy Policy</a>
+            {% endif %}
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+  </div>
+</article>
+
+{% endif %}

@@ -1,0 +1,22 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+
+      <p class="footer-copy">
+        &copy; {{ 'now' | date: "%Y" }} {{ site.author }} &mdash; Built with Jekyll
+      </p>
+
+      <ul class="footer-links" role="list">
+        <li><a href="{{ '/' | relative_url }}">Apps</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        {% if site.github_username %}
+        <li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub ↗</a></li>
+        {% endif %}
+        {% if site.playstore_developer %}
+        <li><a href="{{ site.playstore_developer }}" target="_blank" rel="noopener">Play Store ↗</a></li>
+        {% endif %}
+      </ul>
+
+    </div>
+  </div>
+</footer>

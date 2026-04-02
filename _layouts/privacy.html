@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% assign app = site.data.apps | where: "id", page.app_id | first %}
+
+<div class="container">
+  <div class="privacy-page">
+
+    <header class="privacy-page__header">
+      {% if app %}
+        <p class="privacy-page__app-name">{{ app.name }}</p>
+      {% endif %}
+      <h1 class="privacy-page__title">Privacy Policy</h1>
+      {% if page.last_updated %}
+        <p class="privacy-page__updated">Terakhir diperbarui: {{ page.last_updated }}</p>
+      {% endif %}
+    </header>
+
+    <div class="privacy-content">
+      {{ content }}
+    </div>
+
+    <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+      {% if app %}
+        <a href="{{ '/apps/' | append: app.id | append: '/' | relative_url }}" class="btn btn--secondary">
+          ← Kembali ke {{ app.name }}
+        </a>
+      {% else %}
+        <a href="{{ '/' | relative_url }}" class="btn btn--secondary">← Kembali ke Beranda</a>
+      {% endif %}
+    </div>
+
+  </div>
+</div>

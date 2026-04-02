@@ -1,0 +1,34 @@
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="{{ site.title }} homepage">
+        <span class="nav-logo-dot" aria-hidden="true"></span>
+        {{ site.title }}
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li>
+          <a href="{{ '/' | relative_url }}"
+             {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>
+            Apps
+          </a>
+        </li>
+        <li>
+          <a href="{{ '/about/' | relative_url }}"
+             {% if page.url contains '/about' %}class="active" aria-current="page"{% endif %}>
+            About
+          </a>
+        </li>
+        {% if site.playstore_developer %}
+        <li>
+          <a href="{{ site.playstore_developer }}" target="_blank" rel="noopener">
+            Play Store ↗
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+
+    </div>
+  </div>
+</nav>

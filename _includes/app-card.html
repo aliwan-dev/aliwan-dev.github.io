@@ -1,0 +1,78 @@
+{% assign app = include.app %}
+<article class="app-card" data-status="{{ app.status }}">
+
+  <!-- Header: Icon + Name -->
+  <div class="app-card__header">
+    {% if app.icon and app.icon != "" %}
+      <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon" class="app-card__icon" loading="lazy">
+    {% else %}
+      <div class="app-card__icon-placeholder" aria-hidden="true">📱</div>
+    {% endif %}
+
+    <div class="app-card__meta">
+      {% if app.category %}<span class="app-card__category">{{ app.category }}</span>{% endif %}
+      <h3 class="app-card__name">
+        <a href="{{ '/apps/' | append: app.id | append: '/' | relative_url }}">{{ app.name }}</a>
+      </h3>
+    </div>
+
+    <span class="badge badge--{{ app.status }}">{{ app.status }}</span>
+  </div>
+
+  <!-- Tagline -->
+  {% if app.tagline %}
+  <p class="app-card__tagline">{{ app.tagline }}</p>
+  {% endif %}
+
+  <!-- Highlights -->
+  {% if app.highlights and app.highlights.size > 0 %}
+  <ul class="app-card__highlights" aria-label="Key features">
+    {% for highlight in app.highlights limit:3 %}
+      <li>{{ highlight }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <!-- Stats (released apps only) -->
+  {% if app.status == "released" and app.downloads != "" %}
+  <div class="app-card__stats">
+    {% if app.rating and app.rating != "" %}
+    <div class="app-card__stat">
+      <span class="app-card__stat-value">{{ app.rating }} ★</span>
+      <span class="app-card__stat-label">Rating</span>
+    </div>
+    {% endif %}
+    {% if app.downloads and app.downloads != "" %}
+    <div class="app-card__stat">
+      <span class="app-card__stat-value">{{ app.downloads }}</span>
+      <span class="app-card__stat-label">Downloads</span>
+    </div>
+    {% endif %}
+    {% if app.version and app.version != "" %}
+    <div class="app-card__stat">
+      <span class="app-card__stat-value">v{{ app.version }}</span>
+      <span class="app-card__stat-label">Version</span>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <!-- Actions -->
+  <div class="app-card__actions">
+    {% if app.status == "released" and app.playstore_url and app.playstore_url != "" %}
+      <a href="{{ app.playstore_url }}" class="btn btn--primary" target="_blank" rel="noopener"
+         aria-label="Download {{ app.name }} on Play Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3.18 23.76a1.99 1.99 0 0 0 2.17-.32l.08-.07 12.16-7.02-2.63-2.63zM.5 1.39C.19 1.73 0 2.26 0 2.96v18.1c0 .7.19 1.23.51 1.57l.08.08 10.14-10.14v-.24L.58 1.31z"/>
+          <path d="M17.62 9.39l-3.17-3.17-10.25 5.92v.28l3.4 3.41z"/>
+          <path d="M3.18.24L17.62 8.7l-3.17-3.18L3.26.17A2.17 2.17 0 0 0 3.18.24z"/>
+        </svg>
+        Play Store
+      </a>
+    {% endif %}
+    <a href="{{ '/apps/' | append: app.id | append: '/' | relative_url }}" class="btn btn--secondary">
+      Detail →
+    </a>
+  </div>
+
+</article>

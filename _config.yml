@@ -1,0 +1,74 @@
+# ============================================================
+# _config.yml — Konfigurasi Utama Jekyll
+# Ganti nilai di bawah dengan data Anda
+# ============================================================
+
+title: "Aliwan Dev"
+tagline: "Android App Developer"
+description: "Building Simple, Fast, and Reliable Mobile Experiences. Based in Indonesia, we create clean, practical, and privacy-focused mobile apps that simplify daily digital tasks."
+author: "Aliwan Dev"
+email: "aliwan.dev@gmail.com"
+
+baseurl: ""          # Leave empty for username.github.io
+url: "https://aliwan-dev.github.io"
+
+# Social Links
+github_username: aliwan-dev
+playstore_developer: "https://play.google.com/store/apps/dev?id=7390731671542618991"
+
+# ============================================================
+# Collections
+# ============================================================
+collections:
+  apps:
+    output: true
+    permalink: /apps/:name/
+  privacy:
+    output: true
+    permalink: /privacy/:name/
+
+# ============================================================
+# Default Front Matter
+# ============================================================
+defaults:
+  - scope:
+      path: ""
+      type: "apps"
+    values:
+      layout: "app"
+  - scope:
+      path: ""
+      type: "privacy"
+    values:
+      layout: "privacy"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# ============================================================
+# Build Settings — GitHub Pages Compatible
+# ============================================================
+markdown: kramdown
+highlighter: rouge
+theme: null
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugin yang didukung GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude dari build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules/
+  - vendor/
+  - .sass-cache/
