@@ -6,40 +6,44 @@
    Dark Editorial Aesthetic
    ============================================================ */
 
-/* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300%3B400%3B500%3B600%3B700&family=Inter:wght@300%3B400%3B500%3B600%3B700&family=DM+Mono:wght@400%3B500&display=swap');
 
 /* ============================================================
    CSS Custom Properties
    ============================================================ */
 :root {
   /* Colors - Light Theme (Warm Background, Cold Accents) */
-  --bg:          #faf9f6;       /* Warm linen white */
-  --bg-card:     #ffffff;
+  --bg: #faf9f6;
+  /* Warm linen white */
+  --bg-card: #ffffff;
   --bg-elevated: #f4f2ee;
-  --surface:     #f0edea;
-  --border:      rgba(0, 0, 0, 0.08);
-  --border-hover:rgba(0, 0, 0, 0.15);
+  --surface: #f0edea;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
 
-  --accent:      #2563eb;       /* Cold Professional Blue */
-  --accent-dim:  rgba(37, 99, 235, 0.08);
+  --accent: #2563eb;
+  /* Cold Professional Blue */
+  --accent-dim: rgba(37, 99, 235, 0.08);
   --accent-glow: rgba(37, 99, 235, 0.12);
 
-  --text-primary:   #1a1a1a;    /* Deep Charcoal */
-  --text-secondary: #4b5563;    /* Cool Gray */
-  --text-muted:     #9ca3af;
+  --text-primary: #1a1a1a;
+  /* Deep Charcoal */
+  --text-secondary: #4b5563;
+  /* Cool Gray */
+  --text-muted: #9ca3af;
 
   /* Typography */
   --font-display: 'Outfit', sans-serif;
-  --font-body:    'Inter', sans-serif;
-  --font-mono:    'DM Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'DM Mono', monospace;
 
   /* Spacing */
-  --space-xs:  0.25rem;
-  --space-sm:  0.5rem;
-  --space-md:  1rem;
-  --space-lg:  1.5rem;
-  --space-xl:  2.5rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
   --space-2xl: 4rem;
   --space-3xl: 7rem;
 
@@ -57,7 +61,13 @@
 /* ============================================================
    Reset & Base
    ============================================================ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -68,16 +78,29 @@ body {
   background: var(--bg);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 17px; /* Slightly larger for professionalism */
+  font-size: 17px;
+  /* Slightly larger for professionalism */
   line-height: 1.6;
   font-weight: 400;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; height: auto; display: block; }
-a { color: var(--accent); text-decoration: none; transition: opacity var(--transition); }
-a:hover { opacity: 0.8; }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+a:hover {
+  opacity: 0.8;
+}
 
 /* ============================================================
    Layout
@@ -99,7 +122,8 @@ a:hover { opacity: 0.8; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 249, 246, 0.85); /* Matches warm bg */
+  background: rgba(250, 249, 246, 0.85);
+  /* Matches warm bg */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -133,8 +157,17 @@ a:hover { opacity: 0.8; }
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.85); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
 }
 
 .nav-links {
@@ -153,7 +186,10 @@ a:hover { opacity: 0.8; }
 }
 
 .nav-links a:hover,
-.nav-links a.active { color: var(--text-primary); opacity: 1; }
+.nav-links a.active {
+  color: var(--text-primary);
+  opacity: 1;
+}
 
 /* ============================================================
    Hero Section
@@ -209,7 +245,8 @@ a:hover { opacity: 0.8; }
 .hero h1 em {
   font-style: italic;
   font-weight: 400;
-  color: var(--accent); /* Accent for emphasis */
+  color: var(--accent);
+  /* Accent for emphasis */
 }
 
 .hero-desc {
@@ -251,7 +288,8 @@ a:hover { opacity: 0.8; }
   gap: var(--space-md);
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-md);
-  border-bottom: 2px solid var(--border); /* Slightly thicker for light theme */
+  border-bottom: 2px solid var(--border);
+  /* Slightly thicker for light theme */
 }
 
 .section-number {
@@ -265,7 +303,8 @@ a:hover { opacity: 0.8; }
 .section-title {
   font-family: var(--font-display);
   font-size: 2rem;
-  font-weight: 700; /* Bolder for professional look */
+  font-weight: 700;
+  /* Bolder for professional look */
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
@@ -284,7 +323,7 @@ a:hover { opacity: 0.8; }
   padding: var(--space-2xl) 0;
 }
 
-.apps-section + .apps-section {
+.apps-section+.apps-section {
   border-top: 1px solid var(--border);
 }
 
@@ -308,15 +347,18 @@ a:hover { opacity: 0.8; }
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  transition: all var(--transition-slow); /* Smooth slow transition */
+  transition: all var(--transition-slow);
+  /* Smooth slow transition */
   position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .app-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
   opacity: 0;
@@ -326,10 +368,12 @@ a:hover { opacity: 0.8; }
 .app-card:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.08), 0 0 0 1px var(--accent-dim);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--accent-dim);
 }
 
-.app-card:hover::before { opacity: 1; }
+.app-card:hover::before {
+  opacity: 1;
+}
 
 /* Card Header */
 .app-card__header {
@@ -410,14 +454,14 @@ a:hover { opacity: 0.8; }
 
 .badge--released {
   color: var(--accent);
-  border-color: rgba(74,222,128,0.3);
-  background: rgba(74,222,128,0.08);
+  border-color: rgba(74, 222, 128, 0.3);
+  background: rgba(74, 222, 128, 0.08);
 }
 
 .badge--development {
   color: #f59e0b;
-  border-color: rgba(245,158,11,0.3);
-  background: rgba(245,158,11,0.08);
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.08);
 }
 
 .badge--draft {
@@ -552,7 +596,9 @@ a:hover { opacity: 0.8; }
   padding-left: 0;
 }
 
-.btn--ghost:hover { opacity: 0.7; }
+.btn--ghost:hover {
+  opacity: 0.7;
+}
 
 .btn svg {
   width: 14px;
@@ -576,7 +622,10 @@ a:hover { opacity: 0.8; }
   transition: color var(--transition);
 }
 
-.app-detail__back:hover { color: var(--text-primary); opacity: 1; }
+.app-detail__back:hover {
+  color: var(--text-primary);
+  opacity: 1;
+}
 
 .app-detail__hero {
   display: grid;
@@ -675,7 +724,9 @@ a:hover { opacity: 0.8; }
   border-bottom: 1px solid var(--border);
 }
 
-.app-detail__content h2:first-child { margin-top: 0; }
+.app-detail__content h2:first-child {
+  margin-top: 0;
+}
 
 .app-detail__content h3 {
   font-family: var(--font-body);
@@ -698,7 +749,9 @@ a:hover { opacity: 0.8; }
   color: var(--text-secondary);
 }
 
-.app-detail__content li { margin-bottom: var(--space-xs); }
+.app-detail__content li {
+  margin-bottom: var(--space-xs);
+}
 
 .app-detail__content code {
   font-family: var(--font-mono);
@@ -795,7 +848,9 @@ a:hover { opacity: 0.8; }
   transition: transform var(--transition);
 }
 
-.screenshots-grid img:hover { transform: scale(1.03); }
+.screenshots-grid img:hover {
+  transform: scale(1.03);
+}
 
 /* ============================================================
    Privacy Policy Page
@@ -843,7 +898,10 @@ a:hover { opacity: 0.8; }
   color: var(--text-primary);
 }
 
-.privacy-content p { color: var(--text-secondary); margin-bottom: var(--space-md); }
+.privacy-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
 
 .privacy-content ul {
   padding-left: var(--space-lg);
@@ -851,7 +909,9 @@ a:hover { opacity: 0.8; }
   margin-bottom: var(--space-md);
 }
 
-.privacy-content li { margin-bottom: var(--space-xs); }
+.privacy-content li {
+  margin-bottom: var(--space-xs);
+}
 
 /* ============================================================
    Footer
@@ -887,7 +947,10 @@ a:hover { opacity: 0.8; }
   transition: color var(--transition);
 }
 
-.footer-links a:hover { color: var(--text-primary); opacity: 1; }
+.footer-links a:hover {
+  color: var(--text-primary);
+  opacity: 1;
+}
 
 /* ============================================================
    About Page
@@ -904,7 +967,10 @@ a:hover { opacity: 0.8; }
   margin-bottom: var(--space-xl);
 }
 
-.about-page p { color: var(--text-secondary); margin-bottom: var(--space-md); }
+.about-page p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
 
 /* ============================================================
    Empty State
@@ -923,10 +989,14 @@ a:hover { opacity: 0.8; }
    ============================================================ */
 .sr-only {
   position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0);
-  white-space: nowrap; border-width: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* ============================================================
@@ -938,10 +1008,17 @@ a:hover { opacity: 0.8; }
     --space-3xl: 4rem;
   }
 
-  .nav-links { display: none; }
+  .nav-links {
+    display: none;
+  }
 
-  .hero h1 { font-size: 2.4rem; }
-  .hero-stats { gap: var(--space-lg); }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-stats {
+    gap: var(--space-lg);
+  }
 
   .apps-grid {
     grid-template-columns: 1fr;
@@ -971,10 +1048,17 @@ a:hover { opacity: 0.8; }
     text-align: center;
   }
 
-  .section-header { flex-wrap: wrap; }
+  .section-header {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
-  .app-card { padding: var(--space-lg); }
-  .hero h1 { font-size: 2rem; }
+  .app-card {
+    padding: var(--space-lg);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
