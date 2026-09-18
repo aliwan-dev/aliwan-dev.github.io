@@ -1,12 +1,12 @@
 ---
 app_id: simple-number-match
 title: "Privacy Policy for Simple Number Match"
-last_updated: "2025-11-21"
+last_updated: "2026-09-18"
 ---
 
 # Privacy Policy
 
-**Last updated:** November 21, 2025
+**Last updated:** September 18, 2026
 
 This Privacy Policy describes how Simple Number Match ("we", "us" or "the App") collects, uses, and discloses your information when you use our mobile application.
 
