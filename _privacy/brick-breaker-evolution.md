@@ -59,5 +59,5 @@ We may update this policy when the app’s data practices change. We will update
 
 For privacy questions or requests:
 
-**Email**: privacy@example.com  
+**Email**: aliwan.dev@gmail.com  
 **Subject**: Brick Breaker Evolution Privacy
