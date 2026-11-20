@@ -59,5 +59,5 @@ notifikasi di aplikasi setidaknya 7 hari sebelum perubahan berlaku.
 
 Pertanyaan atau permintaan terkait privasi:
 
-**Email**: privacy@example.com  
+**Email**: aliwan.dev@gmail.com  
 **Subjek**: [[Nama App]] Privacy
